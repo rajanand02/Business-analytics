@@ -14,4 +14,7 @@ accounts-google
 accounts-twitter
 bootstrap-3
 scss
-iron-router
+npm
+chartjs
+jquery
+datatables
