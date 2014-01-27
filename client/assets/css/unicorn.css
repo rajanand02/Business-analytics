@@ -2065,7 +2065,7 @@ ul#icons li {
   width: 100%;
 }
 .stats-plain li {
-  padding: 0 30px;
+  padding: 0px 30px 6px 30px;
   display: inline-block;
   margin: 0 10px 20px;
 }
