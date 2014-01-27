@@ -1,5 +1,3 @@
-
-
 function drawChart(){
   var data = {
 	labels : ["January","February","March","April","May","June","July"],

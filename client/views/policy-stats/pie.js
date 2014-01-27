@@ -1,8 +1,7 @@
-
 function drawChart(){
 var data = [
 	{
-		value: 30,
+		value: 7,
 		color:"#F38630"
 	},
 	{
