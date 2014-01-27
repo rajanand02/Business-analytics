@@ -1,3 +1,3 @@
-Policy = new Meteor.Collection('Policy')
+Policies = new Meteor.Collection('policies')
 SingleTrip = new Meteor.Collection("singleTrip")
 

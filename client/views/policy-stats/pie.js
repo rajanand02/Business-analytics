@@ -1,20 +1,28 @@
 function drawChart(){
 var data = [
 	{
-		value: 7,
+		value: Policies.find({'purchased_cover.trip_type': 'Single Trip'}).count(),
 		color:"#F38630"
 	},
 	{
-		value : 50,
+		value :Policies.find({'purchased_cover.trip_type': 'Annual Multi-Trip'}).count(),
 		color : "#E0E4CC"
 	},
 	{
-		value : 100,
+		value : Policies.find({'purchased_cover.trip_type': 'Backpacker'}).count(),
 		color : "#69D2E7"
 	},			
 	{
-		value : 100,
+		value :Policies.find({'purchased_cover.trip_type': 'Golf Annual'}).count(),
 		color : "green"
+	},
+	{
+		value :Policies.find({'purchased_cover.trip_type': 'Golf'}).count(),
+		color : "red"
+    },
+	{
+		value :Policies.find({'purchased_cover.trip_type': 'Winter Sports Annual'}).count(),
+		color : "yellow"
 	}			
 ]
   var ctx = $("#pieChart").get(0).getContext("2d");
