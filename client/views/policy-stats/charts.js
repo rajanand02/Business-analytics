@@ -7,14 +7,14 @@ Template.table.helpers({
 
 function drawChart(){
   var data1 = {
-  labels : ["January","February","March","April","May","June","July"],
+  labels : ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
   datasets : [
     {
         fillColor : "rgba(220,220,220,0.5)",
         strokeColor : "rgba(220,220,220,1)",
         pointColor : "rgba(220,220,220,1)",
         pointStrokeColor : "#fff",
-        data : [65,59,90,81,56,55,40]
+        data : Policies.find({},{'purchased_cover.created_at': true})
     },
     {
         fillColor : "rgba(151,187,205,0.5)",
@@ -49,22 +49,25 @@ var data2 = [
     },
 	{
 		value :Policies.find({'purchased_cover.trip_type': 'Winter Sports Annual'}).count(),
-		color : "yellow"
+		color : "yellow",
+    label : 'Sleep',
+    labelColor : 'white',
+    labelFontSize : '15'
 	}			
 ]
 
   var data3 = {
-	labels : ["January","February","March","April","May","June","July"],
+	labels : ["Single Trip","Annual Trip","Golf","Golf Annual","Backpacker","Winter Sports"],
 	datasets : [
-		{
-			fillColor : "rgba(220,220,220,0.5)",
-			strokeColor : "rgba(220,220,220,1)",
-			data : [65,59,90,81,56,55,40]
-		},
+		//{
+			//fillColor : "rgba(220,220,220,0.5)",
+			//strokeColor : "rgba(220,220,220,1)",
+			//data : [65,59,90,81,56,55,40]
+		//},
 		{
 			fillColor : "rgba(151,187,205,0.5)",
 			strokeColor : "rgba(151,187,205,1)",
-			data : [28,48,40,19,96,27,100]
+			data : [Policies.find({'purchased_cover.trip_type': 'Single Trip'}).count(),Policies.find({'purchased_cover.trip_type': 'Annual Multi-Trip'}).count(),Policies.find({'purchased_cover.trip_type': 'Backpacker'}).count(),Policies.find({'purchased_cover.trip_type': 'Golf Annual'}).count(),Policies.find({'purchased_cover.trip_type': 'Golf'}).count(),Policies.find({'purchased_cover.trip_type': 'Winter Sports Annual'}).count()]
 		}
 	]
 }
