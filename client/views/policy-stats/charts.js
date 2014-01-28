@@ -1,12 +1,6 @@
-Handlebars.registerHelper("prettifyDate", function(timestamp) {
-    return new Date(timestamp).toString('yyyy-MM-dd')
-});
 Template.table.helpers({
   policy: function () {
-    return Policies.find();
-  },
-  trip_type: function () {
-    return Policies.find({}, {"purchased_cover.trip_type": true});
+    return Policies.find({},{sort: {"purchased_cover.created_at": -1}});
   }
 });
 
