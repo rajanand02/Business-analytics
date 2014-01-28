@@ -1,32 +1,13 @@
+Handlebars.registerHelper("prettifyDate", function(timestamp) {
+    return new Date(timestamp).toString('yyyy-MM-dd')
+});
 Template.table.helpers({
   policy: function () {
     return Policies.find();
   },
-  singleTripCount: function(){
-    return Policies.find({'purchased_cover.trip_type': 'Single Trip'}).count();
-  },
-  annualTripCount: function () {
-    return Policies.find({'purchased_cover.trip_type': 'Annual Multi-Trip'}).count();
-  },
-  backPackerCount: function () {
-    return Policies.find({'purchased_cover.trip_type': 'Backpacker'}).count();
-  },
-
-  golfAnnualCount: function () {
-    return Policies.find({'purchased_cover.trip_type': 'Golf Annual'}).count();
-  },
-  golfCount: function () {
-    return Policies.find({'purchased_cover.trip_type': 'Golf'}).count();
-  },
-
-  winterSportsCount: function () {
-    return Policies.find({'purchased_cover.trip_type': 'Winter Sports Annual'}).count();
-  },
-
-  tripType: function () {
-    return Policies.findOne({'purchased_cover.tripType':''});
-  } 
-  
+  trip_type: function () {
+    return Policies.find({}, {"purchased_cover.trip_type": true});
+  }
 });
 
 

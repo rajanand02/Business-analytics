@@ -7,20 +7,22 @@
         <th>From</th>
         <th>To</th>
         <th>Cover For</th>
-        <th>No of Travellers</th>
-        <th>Age</th>
+        <th>Package Type</th>
+        <th>Quote Id</th>
+        <th>Total</th>
       </tr>
     </thead>
     <tbody>
         {{#each policy}}
       <tr class="odd gradeX">
-        <td>{{tripType}}</td>
-        <td>Worldwide inc USA, Canada & The Caribbean</td>
-        <td>12-02-2012</td>
-        <td class="center"> 13-02-2012</td>
-        <td class="center">Individual</td>
-        <td>1</td>
-        <td>{{policy}}</td>
+        <td>{{purchased_cover.trip_type}}</td>
+        <td>{{purchased_cover.destination}}</td>
+        <td>{{purchased_cover.departure_date}}</td>
+        <td>{{prettifyDate timestamp}}</td>
+        <td>{{purchased_cover.cover_for}}</td>
+        <td>{{purchased_cover.package_type}}</td>
+        <td>{{main.policy_id}}</td>
+        <td>$ {{main.total}}</td>
       </tr>
       {{/each}}
     </tbody>
