@@ -88,6 +88,7 @@ var data2 = [
 }
 
 Template.charts.rendered = function(){
-  drawChart();
-
-};
+ Deps.autorun(function () {
+        drawChart();
+    });
+    };
