@@ -19,7 +19,6 @@ Template.mainPolicy.helpers({
   winterSportsCount: function () {
     return Policies.find({'purchased_cover.trip_type': 'Winter Sports Annual'}).count();
   }
-
 });
 
 

@@ -12,15 +12,17 @@
       </tr>
     </thead>
     <tbody>
+        {{#each policy}}
       <tr class="odd gradeX">
-        <td>Single Trip</td>
+        <td>{{tripType}}</td>
         <td>Worldwide inc USA, Canada & The Caribbean</td>
         <td>12-02-2012</td>
         <td class="center"> 13-02-2012</td>
         <td class="center">Individual</td>
         <td>1</td>
-        <td>22</td>
+        <td>{{policy}}</td>
       </tr>
+      {{/each}}
     </tbody>
   </table>
 </template>
