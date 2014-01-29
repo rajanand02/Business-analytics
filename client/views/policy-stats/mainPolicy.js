@@ -1,3 +1,4 @@
+Meteor.subscribe('policies');
 Template.mainPolicy.helpers({
   singleTripCount: function(){
     return Policies.find({'purchased_cover.trip_type': 'Single Trip'}).count();
