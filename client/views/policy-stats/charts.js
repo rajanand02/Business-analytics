@@ -1,10 +1,3 @@
-Template.table.helpers({
-  policy: function () {
-    return Policies.find({},{sort: {"purchased_cover.created_at": -1}});
-  }
-});
-
-
 function drawChart(){
   var data1 = {
 	labels : ["Single Trip","Annual Trip","Golf","Golf Annual","Backpacker","Winter Sports"],
@@ -88,3 +81,4 @@ Template.charts.rendered = function(){
         drawChart();
     });
     };
+

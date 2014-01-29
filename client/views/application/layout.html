@@ -4,6 +4,7 @@
       {{> header}}
     </div>
     <div id="main-content" class = "row">
+      {{#if policy}}
       {{> mainPolicy}}
       <div class="row">
         {{> charts}}
@@ -11,6 +12,9 @@
       <div class="row" style=" margin-top: 110px;">
         {{> table}}
       </div>
+      {{else}}
+      <h1 class= "no-policy">No policy have been create to display statistics</h1>
+      {{/if}}
     </div>
   </body>
 </template>
