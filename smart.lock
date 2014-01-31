@@ -7,7 +7,8 @@
       "npm": {},
       "chartjs": {},
       "datatables": {},
-      "moment": {}
+      "moment": {},
+      "dc.js-package": {}
     },
     "packages": {
       "accounts-ui-bootstrap-3": {
@@ -39,6 +40,16 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.5.1",
         "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
+      },
+      "dc.js-package": {
+        "git": "https://github.com/Ore4444/dc.js-package.git",
+        "tag": "v0.0.1",
+        "commit": "7ca01b8d00ea929991fcb96c9a571f585df3be1e"
+      },
+      "Crossfilter": {
+        "git": "https://github.com/Ore4444/crossfilter-package.git",
+        "tag": "v0.0.1",
+        "commit": "0984f6635387eaa3292c6c4ddcfcbda3bf72e9d2"
       }
     }
   }

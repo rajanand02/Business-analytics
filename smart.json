@@ -5,6 +5,7 @@
     "npm": {},
     "chartjs": {},
     "datatables": {},
-    "moment": {}
+    "moment": {},
+    "dc.js-package": {}
   }
 }
