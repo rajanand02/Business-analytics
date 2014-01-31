@@ -1,6 +1,6 @@
 function drawChart(){
   var data1 = {
-	labels : ["Single Trip","Annual Trip","Golf","Golf Annual","Backpacker","Winter Sports"],
+	labels : ["Single Trip","Annual Trip","Backpacker","Golf Annual","Golf","Winter Sports"],
   datasets : [
     //{
         //fillColor : "rgba(220,220,220,0.5)",
@@ -49,7 +49,7 @@ var data2 = [
 ]
 
   var data3 = {
-	labels : ["Single Trip","Annual Trip","Golf","Golf Annual","Backpacker","Winter Sports"],
+	labels : ["Single Trip","Annual Trip","Backpacker","Golf Annual","Golf","Winter Sports"],
 	datasets : [
 		//{
 			//fillColor : "rgba(220,220,220,0.5)",
